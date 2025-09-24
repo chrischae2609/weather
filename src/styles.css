@@ -1,0 +1,433 @@
+
+* {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(227, 227, 227);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px 1px rgb(52, 51, 51);
+}
+
+header h1 {
+    margin-left: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+#content {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 120px;
+}
+
+#projects {
+    min-width: 200px;
+    width: 200px;
+    padding: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(235, 234, 206);
+    border-radius: 20px;
+    box-shadow: 12px 1px 0px rgb(176, 175, 140);
+}
+
+#newProject {
+    width: 200px;
+    height: 60px;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(249, 208, 252);
+    box-shadow: 0 5px rgb(220, 165, 214);
+    font-size: 1.2rem;
+}
+
+#newProject:hover {
+    cursor: pointer;
+    background-color: rgb(234, 189, 239);
+}
+
+#newProject:active{
+    transform: translateY(5px);
+    box-shadow: 0 2px rgb(220, 165, 214); 
+}
+
+.newProjectForm{
+    width: 250px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.newProjectForm .cancelBtn,
+.newProjectForm .saveProjBtn {
+    width: 150px;
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.newProjectForm .projectInput {
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    background: #f0f0f0; 
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2),
+    inset -2px -2px 5px rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.newProjectForm .cancelBtn {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(254, 148, 148);
+    box-shadow: 0 5px rgb(164, 50, 50);
+
+}
+
+.newProjectForm .cancelBtn:hover {
+    background-color: rgb(200, 94, 94);
+    cursor: pointer;
+}
+
+.newProjectForm .cancelBtn:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px rgb(164, 50, 50);
+}
+
+.newProjectForm .saveProjBtn {
+    border: none;
+    border-radius: 10px;
+    background-color: lightgreen;
+    box-shadow: 0 5px green;
+}
+
+.newProjectForm .saveProjBtn:hover {
+    background-color: rgb(122, 200, 122);
+    cursor: pointer;
+}
+
+.newProjectForm .saveProjBtn:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px green;
+}
+
+.addedProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectBtn {
+    width: 200px;
+    height: 50px;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(230, 226, 226);
+    background-color: white;
+    transition: background-color 0.2s ease;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.projectBtn:hover {
+    cursor: pointer;
+    background-color: rgb(240, 237, 237);
+}
+
+.projectBtn.active {
+    background-color: rgb(182, 248, 185);
+    width: 210px;
+    height: 52px;
+}
+
+.extrasBtn {
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.extrasBtn:hover {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+.extras {
+    width: 180px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: rgb(211, 252, 255);
+    display: none;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.rename {
+    width: 140px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.extraBtns {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    margin: auto;
+    gap: 7px;
+}
+
+.extraBtns .deleteProj, .extraBtns .renameBtn, .extraBtns .exitBtn {
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+}
+
+.extraBtns .deleteProj:hover, .extraBtns .renameBtn:hover, .extraBtns .exitBtn:hover {
+    cursor: ponter;
+    background-color: white;
+}
+
+.extraBtns .deleteProj:active, .extraBtns .renameBtn:active, .extraBtns .exitBtn:active {
+    transform: translateY(2px);
+}
+
+
+
+
+
+
+
+
+
+#tasks {
+    /* min-width: 250px; */
+    width: 1200px;
+    min-width: 700px;
+    background-color: rgb(205, 204, 204);
+    border-radius: 20px;
+    box-shadow: 12px 1px 1.3px rgb(118, 118, 118);
+}
+
+.tasksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.newTaskForm {
+    display: flex;
+    /* border: 1px solid black; */
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 30px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgb(62, 62, 62);
+    background-color: white;
+}
+
+.formMain {
+    display: flex;
+    flex-direction: column;
+}
+
+.required {
+    display: flex;
+    gap: 40px;
+    margin-right: 40px;
+}
+
+.taskTitle, .dueDate, .priority {
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    background: #f0f0f0; 
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2),
+                inset -2px -2px 5px rgba(255,255,255,0.7);
+}
+
+.required .taskTitle {
+    height: 50px;
+}
+
+.required .dueDate:hover, .required .priority:hover {
+    cursor: pointer;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2),
+    inset -2px -2px 5px rgba(255,255,255,0.7);
+}
+
+
+.taskDesc {
+    width: 700px;
+    max-width: 800px;
+    min-width: 300px;
+    max-height: 80px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f0f0; 
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2),
+                inset -2px -2px 5px rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.taskBtns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.taskBtns .cancel, .taskBtns .addTask {
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+.taskBtns .cancel {
+    background-color: rgb(254, 148, 148);
+    box-shadow: 0 5px rgb(164, 50, 50);
+}
+
+.taskBtns .cancel:hover {
+    background-color: rgb(200, 94, 94);
+}
+
+.taskBtns .addTask {
+    background-color: lightgreen;
+    box-shadow: 0 5px green;
+}
+
+.taskBtns .addtask:hover {
+    background-color: rgb(122, 200, 122);
+}
+.taskBtns .cancel:hover, .taskBtns .addTask:hover {
+    cursor: pointer;
+}
+
+.taskBtns .cancel:active, .taskBtns .addTask:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px #949494; 
+}
+
+
+.taskDisplay {
+    width: 300px;
+    padding: 15px;
+    background-color: rgb(187, 187, 220);
+    border-radius: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    width: 200px;
+    height: 45px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(113, 247, 113);
+}
+
+.desc {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.taskPriority {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.date {
+    padding: 10px;
+    background-color: rgb(252, 201, 112);
+    border-radius: 5px;
+}
+
+.done {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.done:hover {
+    cursor: pointer;
+}
+
+.removeTaskBtn {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(254, 148, 148);
+    box-shadow: 0 5px rgb(164, 50, 50);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.removeTaskBtn:hover {
+    cursor: pointer;
+    background-color: rgb(200, 94, 94);
+}
+
+.removeTaskBtn:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px rgb(164, 50, 50);
+}
