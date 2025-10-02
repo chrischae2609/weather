@@ -1,14 +1,40 @@
- 
-<header>
-    <nav>
-        <h1>To Do List</h1>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
 
-<div id="content">
-    <div id="projects">
-        <button id="newProject">New Project</button>
+    <nav class="header">
+        <div class="input-section">
+            <div>
+                <input type="text" id="location-input" name="location-input" placeholder="City Name">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+        <div class="container">
+            <input type="checkbox" id="check">
+            <label for="check" class="button">
+                <span class="unit-label">F</span>
+            </label>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="current">
+            <div class="content-now"></div>
+        </div>
+        <div class="daily-hourly">
+            <div class="content-daily"></div>
+            <div class="right">
+                <div class="content-hourly"></div>
+                <div class="extra-info"></div>
+            </div>
+        </div>
     </div>
-    <div id="tasks">
-    </div>
-</div>
+
+</body>
+</html>
